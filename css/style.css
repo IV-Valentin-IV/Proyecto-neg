@@ -1,0 +1,23 @@
+/* hack para convertir 1 rem a 10 px
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;1 rem = 10 px
+}
+*/
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;/*1 rem = 10 px*/
+}
+
+.titulo{
+    text-align: center;
+    font-size: 2rem;
+
+}
+.titulo span{
+    font-size: 1.7rem;
+}
