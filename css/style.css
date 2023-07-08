@@ -12,21 +12,50 @@ body{
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris:#757575;
+    --gris_claro: #DFE9F3;
 }
 html{
     font-size: 62.5%;
 }
+*, *:before,*:after{
+    box-sizing: inherit; /** este bloque sirve para el position relative(padre) y absolute(hijo) **/
+}
 body{
-    font-size: 16px;/*1 rem = 10 px*/
+    font-size: 10px;/*1 rem = 10 px*/
     font-family: 'Kanit', sans-serif;;
     margin: 0;
+    box-sizing: border-box;/*sirve para el position relative tambien*/
+    /* para hacer un fondo de color degradado se usa background-image*/
+    /*primero pasas la direccion hacia donde va el degradado*/
+    background-image: linear-gradient(to top,var(--gris_claro) 0%,var(--blanco)100% );
 }
-
-.titulo{
-    text-align: center;
-    font-size: 2rem ;
+h1{
+    font-size: 4rem ;
     color: var(--primario);
     font-weight:700 ;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+span{
+    font-size: 1.7rem;
+}
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(138,138,138,0.47);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(138,138,138,0.47);
+    box-shadow: 0px 5px 15px 0px rgba(138,138,138,0.47);
+    background-color: var(--blanco);
+    padding: 2rem;
+}
+.contenedor{
+    max-width: 80rem;
+    margin: 0 auto  ;
 }
 .navegacion-principal{
    display: flex;
@@ -57,15 +86,83 @@ body{
 .nav_bg{
     background-color: var(--secundario);
 }
-.contenedor{
-    max-width: 60rem;
-    margin: 0 auto  ;
-}
-.titulo span{
-    font-size: 1.7rem;
-}
+
 .hero{
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.contenido-hero{
+    position:absolute;
+    background-color: rgba(0,0, 0,0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        /*forma mas corta de usar "grid"grid: template-rows/template-colums*/
+        grid-template-columns: repeat(3,1fr);
+        /*separacion entre columnas del grid*/
+        column-gap: 1rem;
+    }
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3{
+    color: var(--secundario);
+    font-weight: 500;
+}
+.servicio p{
+    /*interlineado*/
+    line-height: 2;
+    text-align: center;
+}
+.servicio .iconos{
+    width: 18rem;
+    height: 18rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    /*para posicionar algo en el centro utilizar esto ->*/
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    /*<- hasta aqui y se posiciona en el centro*/
 }
