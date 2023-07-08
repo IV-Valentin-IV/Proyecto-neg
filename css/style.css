@@ -19,14 +19,26 @@ html{
 }
 body{
     font-size: 16px;/*1 rem = 10 px*/
+    font-family: 'Kanit', sans-serif;;
 }
 
 .titulo{
     text-align: center;
     font-size: 2rem ;
     color: var(--primario);
-    font-family: 'Kanit', sans-serif;;
+    font-weight:700 ;
 
+}
+.navegacion-principal{
+    background-color: var(--secundario);
+
+}
+.contenedor{
+    width: 60rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .titulo span{
     font-size: 1.7rem;
