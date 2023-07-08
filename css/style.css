@@ -8,11 +8,10 @@ body{
 */
 :root{
     --blanco : #ffffff;
-    --oscuro: #21212121;
+    --oscuro: #212121;
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris:#757575;
-
 }
 html{
     font-size: 62.5%;
@@ -20,6 +19,7 @@ html{
 body{
     font-size: 16px;/*1 rem = 10 px*/
     font-family: 'Kanit', sans-serif;;
+    margin: 0;
 }
 
 .titulo{
@@ -27,19 +27,34 @@ body{
     font-size: 2rem ;
     color: var(--primario);
     font-weight:700 ;
-
 }
 .navegacion-principal{
+   display: flex;
+   justify-content: space-between;
+}
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+.nav_bg{
     background-color: var(--secundario);
-
 }
 .contenedor{
     width: 60rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto  ;
 }
 .titulo span{
     font-size: 1.7rem;
+}
+@media (min-width: 480px){
+    body {
+        background-color: var(--oscuro);
+    }
 }
