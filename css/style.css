@@ -16,6 +16,8 @@ body{
 }
 html{
     font-size: 62.5%;
+    box-sizing: border-box;/*sirve para el position relative tambien*/
+    scroll-snap-type: y mandatory;
 }
 *, *:before,*:after{
     box-sizing: inherit; /** este bloque sirve para el position relative(padre) y absolute(hijo) **/
@@ -24,7 +26,6 @@ body{
     font-size: 10px;/*1 rem = 10 px*/
     font-family: 'Kanit', sans-serif;;
     margin: 0;
-    box-sizing: border-box;/*sirve para el position relative tambien*/
     /* para hacer un fondo de color degradado se usa background-image*/
     /*primero pasas la direccion hacia donde va el degradado*/
     background-image: linear-gradient(to top,var(--gris_claro) 0%,var(--blanco)100% );
@@ -159,6 +160,12 @@ span{
         /*separacion entre columnas del grid*/
         column-gap: 1rem;
     }
+}
+.servicios,
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 .servicio{
     display: flex;
