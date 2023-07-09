@@ -161,19 +161,12 @@ span{
         column-gap: 1rem;
     }
 }
-.servicios,
+/*.servicios,
 .navegacion-principal,
 .formulario{
     scroll-snap-align: center;
     scroll-snap-stop: always;
-}
-@media (min-width: 768px) {
-    .servicios,
-    .navegacion-principal,
-    .formulario{
-        scroll-snap-stop: always;
-    }
-}
+}*/
 .servicio{
     display: flex;
     flex-direction: column;
